@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { FireStore } from '@angular/fire';
 
 
 @Component({
@@ -9,7 +8,7 @@ import { FireStore } from '@angular/fire';
 })
 export class CategoriesComponent implements OnInit {
 
-  constructor( private afs: Firestore ) {}
+  constructor( ) {}
   
   ngOnInit(): void {}
 
@@ -18,9 +17,6 @@ export class CategoriesComponent implements OnInit {
     let categoryData = {
       category: formData.value.category
     }
-
-    this.afs.collection('categories').add(categoryData);
-    // this.afs.collection('categories').add(categoryData);
     
   }
 
